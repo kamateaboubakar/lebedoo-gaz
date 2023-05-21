@@ -5,7 +5,7 @@
   <groupId>com.lebedoo</groupId>
   <artifactId>lebedoo-gaz</artifactId>
   <version>1.0</version>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
 
   <name>lebedoo-gaz</name>
   <url>http://maven.apache.org</url>

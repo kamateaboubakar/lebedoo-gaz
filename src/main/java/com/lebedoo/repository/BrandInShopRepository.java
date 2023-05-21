@@ -21,7 +21,7 @@ public interface BrandInShopRepository extends JpaRepository<BrandInShop, Intege
             "inner join brands t3 on t3.id=t2.brand_id\n" +
             "where t2.id=?", nativeQuery = true)
     List<Map<String, Object>> getAllById(int id);
-    @Query(value="select t1.*\n" +
+    @Query(value="select t1.*, t2.id brand_in_shop_id\n" +
             "from gas_sizes t1\n" +
             "inner join brands_in_shop t2 on t1.id=t2.gas_size_id\n" +
             "where t2.shop_id=? and t2.brand_id=?", nativeQuery = true)
