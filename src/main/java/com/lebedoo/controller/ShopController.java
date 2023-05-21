@@ -7,9 +7,8 @@ import com.lebedoo.repository.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 @RequestMapping("/shops")
@@ -19,8 +18,13 @@ public class ShopController {
     @Autowired
     BrandRepository brandRepository;
     @GetMapping("/closests")
-    public List<Shop> closests(@RequestParam(name="latitude") double latitude, @RequestParam(name="longitude") double longitude) {
-        return repository.findClosests(longitude, latitude);
+    public List<Map<String, Object>> closests(@RequestParam(name="latitude") double latitude, @RequestParam(name="longitude") double longitude) {
+        Date dt = new Date();
+        String dayOfWeek = new SimpleDateFormat("u").format(dt);
+        String hour = new SimpleDateFormat("HH:mm").format(dt);
+        // System.out.println(dayOfWeek);
+        // System.out.println(hour);
+        return repository.findClosests(longitude, latitude, dayOfWeek, hour);
     }
     @GetMapping("/{id}")
     public ShopBrandsDto get(@PathVariable("id") int id){
