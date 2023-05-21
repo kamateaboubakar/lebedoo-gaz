@@ -16,14 +16,14 @@ public class Shop {
     @Column(name = "description")
     private String description;
     @Column(name = "latitude")
-    private String latitude ;
+    private double latitude ;
     @Column(name = "longitude")
-    private String longitude ;
+    private double longitude ;
 
     public Shop() {
     }
 
-    public Shop(String name, String address, String description, String latitude, String longitude) {
+    public Shop(String name, String address, String description, double latitude, double longitude) {
         this.name = name;
         this.address = address;
         this.description = description;
@@ -63,19 +63,19 @@ public class Shop {
         this.description = description;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 }

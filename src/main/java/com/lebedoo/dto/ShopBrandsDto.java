@@ -13,8 +13,8 @@ public class ShopBrandsDto {
     private String name;
     private String address;
     private String description;
-    private String latitude ;
-    private String longitude ;
+    private double latitude ;
+    private double longitude ;
     public List<Map<String, Object>> brands;
 
     public ShopBrandsDto() {
@@ -28,7 +28,7 @@ public class ShopBrandsDto {
         this.longitude = shop.getLongitude();
     }
 
-    public ShopBrandsDto(long id, String name, String address, String description, String latitude, String longitude) {
+    public ShopBrandsDto(long id, String name, String address, String description, double latitude, double longitude) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -69,19 +69,19 @@ public class ShopBrandsDto {
         this.description = description;
     }
 
-    public String getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 }

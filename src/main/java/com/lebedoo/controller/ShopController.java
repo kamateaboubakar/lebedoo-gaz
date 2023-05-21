@@ -5,10 +5,7 @@ import com.lebedoo.entity.Shop;
 import com.lebedoo.repository.BrandRepository;
 import com.lebedoo.repository.ShopRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +19,7 @@ public class ShopController {
     @Autowired
     BrandRepository brandRepository;
     @GetMapping("/closests")
-    public List<Shop> closests(String latitude, String longitude) {
+    public List<Shop> closests(@RequestParam(name="latitude") double latitude, @RequestParam(name="longitude") double longitude) {
         return repository.findClosests(longitude, latitude);
     }
     @GetMapping("/{id}")

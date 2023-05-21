@@ -14,6 +14,6 @@ import java.util.List;
 public interface ShopRepository extends JpaRepository<Shop, Integer> {
     @Query(value = "SELECT t.* FROM shops t", nativeQuery = true)
     Page<Shop> findPage(Pageable pageable);
-    @Query(value = "SELECT t.* FROM shops t order by latitude, longitude limit 16 offset 0", nativeQuery = true)
-    List<Shop> findClosests(String latitude, String longitude);
+    @Query(value = "SELECT t.* FROM shops t order by sqrt((? - latitude)^2 + (? - longitude)^2) desc limit 16 offset 0", nativeQuery = true)
+    List<Shop> findClosests(double latitude, double longitude);
 }
