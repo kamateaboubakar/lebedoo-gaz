@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5446ebcb-adba-44c1-bba4-e2ed535d5dfa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lebedoo/request/OrderRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lebedoo/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lebedoo/controller/ShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lebedoo/repository/ShopRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lebedoo/repository/ShopRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lebedoo/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lebedoo/controller/OrderController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
