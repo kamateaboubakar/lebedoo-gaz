@@ -12,14 +12,54 @@ public class CustomerAddress {
     @Column(name = "target_id")
     private int targetId ;
     @Column(name = "latitude")
-    private String latitude;
+    private double latitude;
     @Column(name = "longitude")
-    private String longitude;
+    private double longitude;
                                    
     public CustomerAddress() {
     }
 
-    public CustomerAddress(String customerSessionId, int targetId, String latitude, String longitude) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCustomerSessionId() {
+        return customerSessionId;
+    }
+
+    public void setCustomerSessionId(String customerSessionId) {
+        this.customerSessionId = customerSessionId;
+    }
+
+    public int getTargetId() {
+        return targetId;
+    }
+
+    public void setTargetId(int targetId) {
+        this.targetId = targetId;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public CustomerAddress(String customerSessionId, int targetId, double latitude, double longitude) {
         this.customerSessionId = customerSessionId;
         this.targetId = targetId;
         this.latitude = latitude;
